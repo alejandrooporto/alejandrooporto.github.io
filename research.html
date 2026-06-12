@@ -62,6 +62,8 @@
       margin-bottom: 20px;
     }
 
+    .section { margin-bottom: 48px; }
+
     .paper {
       border-top: 1px solid #e5e5e5;
       padding: 24px 0;
@@ -80,7 +82,14 @@
     .paper-meta {
       font-size: 13px;
       color: #666;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+    }
+
+    .paper-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 10px;
     }
 
     .paper-link {
@@ -94,25 +103,57 @@
 
     .paper-link:hover { border-color: #1a1a1a; }
 
-    .presentation {
-      border-top: 1px solid #e5e5e5;
-      padding: 20px 0;
+    .award {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      background: #fdf6e3;
+      color: #7a5c00;
+      border: 1px solid #f0d98a;
+      border-radius: 100px;
+      padding: 3px 12px;
+      margin-top: 4px;
+      text-decoration: none;
+      transition: background 0.15s;
     }
 
-    .presentation:last-of-type { border-bottom: 1px solid #e5e5e5; }
+    .award:hover { background: #faeec4; }
 
-    .presentation p {
-      font-size: 14px;
-      color: #333;
-    }
-
-    .presentation .venue {
+    .pub-year {
       font-size: 13px;
       color: #888;
-      margin-top: 2px;
+      min-width: 40px;
+      padding-top: 2px;
+      flex-shrink: 0;
     }
 
-    .section { margin-bottom: 48px; }
+    .pub-row {
+      border-top: 1px solid #e5e5e5;
+      padding: 18px 0;
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 12px;
+    }
+
+    .pub-row:last-of-type { border-bottom: 1px solid #e5e5e5; }
+
+    .pub-body p {
+      font-size: 14px;
+      color: #1a1a1a;
+      font-weight: 500;
+      margin-bottom: 2px;
+      line-height: 1.5;
+    }
+
+    .pub-body span {
+      font-size: 13px;
+      color: #666;
+    }
+
+    @media (max-width: 480px) {
+      .pub-row { grid-template-columns: 1fr; gap: 4px; }
+    }
   </style>
 </head>
 <body>
@@ -126,22 +167,50 @@
 
   <h1>Research</h1>
 
+  <!-- WORKING PAPER -->
   <div class="section">
-    <p class="section-label">Working papers</p>
+    <p class="section-label">Working paper</p>
 
     <div class="paper">
-      <p class="paper-title">Analyzing fiscal decentralization: findings from a quasi-experimental study in municipalities</p>
-      <p class="paper-meta">Master Thesis · University of Barcelona</p>
-      <a class="paper-link" href="https://diposit.ub.edu/dspace/handle/2445/214803" target="_blank">View paper ↗</a>
+      <p class="paper-title">Causal fiscal spillovers: evidence from exogenous revenue shocks</p>
+      <p class="paper-meta">University of Girona · Supervisor: Andreas Kyriacou</p>
     </div>
   </div>
 
+  <!-- PUBLISHED RESEARCH -->
   <div class="section">
-    <p class="section-label">Presentations</p>
+    <p class="section-label">Published research</p>
 
-    <div class="presentation">
-      <p>18th Meeting of Economists of Bolivia</p>
-      <p class="venue">Banco Central de Bolivia · June 2025 · Santa Cruz de la Sierra</p>
+    <div class="paper">
+      <p class="paper-title">Analyzing fiscal decentralization: findings from a quasi-experimental study in municipalities</p>
+      <p class="paper-meta">Master Thesis · University of Barcelona & Biblioteca Digital de Catalunya</p>
+      <div class="paper-links">
+        <a class="paper-link" href="https://diposit.ub.edu/dspace/handle/2445/214803" target="_blank">UB Repository ↗</a>
+        <a class="paper-link" href="https://record.bibliotecadigital.gencat.cat/handle/20.500.14345/1749/browse?authority=8204d154-997b-4f3a-9913-f7ddb0aa7ab0&type=author&locale-attribute=es" target="_blank">Biblioteca Digital de Catalunya ↗</a>
+      </div>
+      <a class="award" href="https://govern.cat/gov/notes-premsa/774576/la-generalitat-concedeix-els-premis-recerca-fiscal-i-estudis-tributaris" target="_blank">
+        🏅 Accèsit · Premis Recerca Fiscal i Estudis Tributaris · Generalitat de Catalunya
+      </a>
+    </div>
+
+    <div class="paper">
+      <p class="paper-title">The destination of public budget</p>
+      <p class="paper-meta">2024 · Jubilee Foundation</p>
+    </div>
+
+    <div class="paper">
+      <p class="paper-title">Guide on shared responsibility of care for the sustainability of life</p>
+      <p class="paper-meta">2023 · Swisscontact</p>
+    </div>
+
+    <div class="paper">
+      <p class="paper-title">Methodological guide for the identification and application of municipal own-source revenues</p>
+      <p class="paper-meta">2021 · Swisscontact</p>
+    </div>
+
+    <div class="paper">
+      <p class="paper-title">Finance and expenditure constraints of autonomous territorial entities</p>
+      <p class="paper-meta">2020 · State Autonomy Service of Bolivia</p>
     </div>
   </div>
 
