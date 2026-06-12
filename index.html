@@ -1,23 +1,158 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Alejandro Oporto Velásquez</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alejandro Oporto Velásquez – Economist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; max-width: 800px; }
-    img { width: 150px; border-radius: 75px; }
-    h1 { color: #2c3e50; }
-    a { color: #2980b9; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #ffffff;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 56px;
+      border-bottom: 1px solid #e5e5e5;
+      padding-bottom: 16px;
+    }
+
+    nav a {
+      font-size: 14px;
+      color: #555;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      transition: color 0.15s;
+    }
+
+    nav a:hover, nav a.active { color: #1a1a1a; }
+
+    nav a.active {
+      font-weight: 500;
+      border-bottom: 1.5px solid #1a1a1a;
+      padding-bottom: 16px;
+      margin-bottom: -17px;
+    }
+
+    .profile {
+      display: flex;
+      align-items: flex-start;
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+
+    .profile img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1px solid #e5e5e5;
+    }
+
+    .profile-text h1 {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+
+    .profile-text .role {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 0;
+    }
+
+    .bio {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+
+    .fields {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+
+    .field-tag {
+      font-size: 12px;
+      background: #f4f4f4;
+      color: #444;
+      padding: 4px 12px;
+      border-radius: 100px;
+      border: 1px solid #e5e5e5;
+    }
+
+    .links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      font-size: 14px;
+      color: #1a1a1a;
+      text-decoration: none;
+      border-bottom: 1px solid #bbb;
+      padding-bottom: 1px;
+      transition: border-color 0.15s;
+    }
+
+    .links a:hover { border-color: #1a1a1a; }
+
+    @media (max-width: 500px) {
+      .profile { flex-direction: column; gap: 20px; }
+      .profile img { width: 80px; height: 80px; }
+    }
   </style>
 </head>
 <body>
-  <img src="foto2.jpg" alt="Alejandro Oporto Velásquez">
-  <h1>Alejandro Oporto Velásquez</h1>
-  <p>
-    PhD candidate in Economics at the University of Girona, under the supervision of Dr. Andreas Kyriacou. His research focuses on applied econometrics, fiscal decentralization, and public policy evaluation. He previously worked as a Research Assistant at the Institut d’Economia de Barcelona (IEB) and the University of Barcelona. He holds a Master’s degree in Economics from the University of Barcelona and the University of Copenhagen.
+
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="research.html">Research</a>
+    <a href="cv.html">CV</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="profile">
+    <img src="foto2.jpg" alt="Alejandro Oporto Velásquez">
+    <div class="profile-text">
+      <h1>Alejandro Oporto Velásquez</h1>
+      <p class="role">PhD Candidate in Economics · University of Girona</p>
+    </div>
+  </div>
+
+  <p class="bio">
+    I am a PhD candidate in Economics at the University of Girona, supervised by Dr. Andreas Kyriacou. My research focuses on applied econometrics, fiscal decentralization, and public policy evaluation. Previously, I worked as a Research Assistant at the Institut d'Economia de Barcelona (IEB) and the University of Barcelona. I hold a Master's degree in Economics from the University of Barcelona and the University of Copenhagen.
   </p>
-  <p><a href="cv.html">Curriculum Vitae</a> | <a href="research.html">Research</a> | <a href="contact.html">Contact</a></p>
+
+  <div class="fields">
+    <span class="field-tag">Applied Econometrics</span>
+    <span class="field-tag">Fiscal Decentralization</span>
+    <span class="field-tag">Public Policy Evaluation</span>
+  </div>
+
+  <div class="links">
+    <a href="cv_web_oporto.pdf" target="_blank">Curriculum Vitae (PDF)</a>
+    <a href="research.html">Research</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://www.linkedin.com/in/alejandrooporto" target="_blank">LinkedIn</a>
+  </div>
+
 </body>
 </html>
