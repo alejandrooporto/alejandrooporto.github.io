@@ -1,15 +1,124 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact – Alejandro Oporto Velásquez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #ffffff;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 56px;
+      border-bottom: 1px solid #e5e5e5;
+      padding-bottom: 16px;
+    }
+
+    nav a {
+      font-size: 14px;
+      color: #555;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      transition: color 0.15s;
+    }
+
+    nav a:hover { color: #1a1a1a; }
+
+    nav a.active {
+      color: #1a1a1a;
+      font-weight: 500;
+      border-bottom: 1.5px solid #1a1a1a;
+      padding-bottom: 16px;
+      margin-bottom: -17px;
+    }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 40px;
+    }
+
+    .contact-row {
+      border-top: 1px solid #e5e5e5;
+      padding: 18px 0;
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 16px;
+      align-items: baseline;
+    }
+
+    .contact-row:last-of-type { border-bottom: 1px solid #e5e5e5; }
+
+    .contact-label {
+      font-size: 13px;
+      color: #888;
+    }
+
+    .contact-value {
+      font-size: 14px;
+      color: #1a1a1a;
+    }
+
+    .contact-value a {
+      color: #1a1a1a;
+      text-decoration: none;
+      border-bottom: 1px solid #bbb;
+      padding-bottom: 1px;
+      transition: border-color 0.15s;
+    }
+
+    .contact-value a:hover { border-color: #1a1a1a; }
+
+    @media (max-width: 480px) {
+      .contact-row { grid-template-columns: 1fr; gap: 4px; }
+    }
+  </style>
 </head>
 <body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="cv.html">CV</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+
   <h1>Contact</h1>
-  <p>Email: <a href="mailto:alejandro.oporto@udg.edu">alejandro.oporto@udg.edu</a></p>
-   <p>Email: <a href="mailto:oportov07@gmail.com">oportov07@gmail.com</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/alejandrooporto" target="_blank">linkedin.com/in/alejandrooporto</a></p>
-  <p>Department of Economics, University of Girona, Spain</p>
+
+  <div class="contact-row">
+    <span class="contact-label">Institutional email</span>
+    <span class="contact-value"><a href="mailto:alejandro.oporto@udg.edu">alejandro.oporto@udg.edu</a></span>
+  </div>
+
+  <div class="contact-row">
+    <span class="contact-label">Personal email</span>
+    <span class="contact-value"><a href="mailto:oportov07@gmail.com">oportov07@gmail.com</a></span>
+  </div>
+
+  <div class="contact-row">
+    <span class="contact-label">LinkedIn</span>
+    <span class="contact-value"><a href="https://www.linkedin.com/in/alejandrooporto" target="_blank">linkedin.com/in/alejandrooporto ↗</a></span>
+  </div>
+
+  <div class="contact-row">
+    <span class="contact-label">Affiliation</span>
+    <span class="contact-value">Department of Economics, University of Girona, Spain</span>
+  </div>
+
 </body>
 </html>
